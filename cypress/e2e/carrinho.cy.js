@@ -6,7 +6,7 @@ import header from "../pages/header"
 describe("Carrinho", ()=>{
 
     beforeEach(()=>{
-        // Arrange
+        // Arran
         login.visitPage()
 
         login.fillCredentials('standard_user', 'secret_sauce')
