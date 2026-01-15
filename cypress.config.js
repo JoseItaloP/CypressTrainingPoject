@@ -1,4 +1,10 @@
 const { defineConfig } = require("cypress");
+const dotenv = require('dotenv')
+const path = require('path')
+
+dotenv.config({
+  path: path.resolve(__dirname, './.env.dev')
+})
 
 module.exports = defineConfig({
   reporter: 'cypress-multi-reporters',
@@ -21,5 +27,13 @@ module.exports = defineConfig({
       require('cypress-mochawesome-reporter/plugin')(on)
       // implement node event listeners here
     },
+
+    baseUrl: process.env.BASE_URL,
+    env: {
+      username: process.env.USER,
+      password: process.env.PASS,
+      mainUrl: process.env.BASE_URL
+    }
+
   },
 });
