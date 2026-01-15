@@ -11,7 +11,7 @@ describe('Login', ()=>{
     it("Realizar login com sucesso", ()=>{
         
         // Act
-        login.fillCredentials(Cypress.env('username'), Cypress.env('password'))
+        login.fillCredentials('standard_user', 'secret_sauce')
 
 
         // Assert

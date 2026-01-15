@@ -2,7 +2,7 @@ import { Selector } from "./elements"
 
 export default new class Login{
     visitPage(){
-        cy.visit(Cypress.env('mainUrl'))
+        cy.visit('https://www.saucedemo.com/')
     }
 
     fillCredentials(userName, Password){
